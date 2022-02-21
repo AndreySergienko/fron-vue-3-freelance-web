@@ -88,7 +88,6 @@ export default {
         localStorage.setItem('session', 'true')
         commit('setIsRequest')
       } catch (e) {
-         // dispatch('auth/logout', '', {root: true})
          commit('setIsRequest')
       }
     },
