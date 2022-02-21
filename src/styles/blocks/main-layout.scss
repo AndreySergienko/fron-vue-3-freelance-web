@@ -1,0 +1,10 @@
+.main-layout {
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+  background: url("~@/assets/img/background-main.svg") center bottom;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}

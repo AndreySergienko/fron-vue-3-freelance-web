@@ -1,0 +1,108 @@
+@import "../variables";
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  height: 100%;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #2D2D2D;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $yellow-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: #2D2D2D;
+  }
+
+  &__items {
+    padding: 2px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 49%;
+    border-radius: 15px;
+    min-height: 40px;
+
+    transition: all .2s ease;
+    cursor: pointer;
+
+
+    &.mb {
+      margin-bottom: 20px;
+    }
+
+    &-back {
+      background: none;
+    }
+
+    & svg {
+      opacity: 0;
+      width: 10%;
+      margin-left: 10px;
+      min-width: 20px;
+
+      transition: all .2s ease;
+
+      & path {
+        transition: all .2s ease;
+      }
+
+      &:hover path {
+        transform: scale(.9);
+      }
+    }
+
+    &:hover,
+    &.active {
+      background: $yellow-color;
+
+      & svg {
+        opacity: 1;
+      }
+    }
+
+    &-back:hover {
+      background: none;
+    }
+  }
+
+  &__description {
+    width: 90%;
+
+    color: $primary-gray;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+
+    transition: all .2s ease;
+  }
+
+  &__items:hover &__description,
+  &__items.active &__description {
+    color: #2D2D2D;
+  }
+
+  &__img {
+    cursor: pointer;
+  }
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background-color: $yellow-color;
+    border: 0;
+    outline: none;
+  }
+}

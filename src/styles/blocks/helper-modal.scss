@@ -1,0 +1,26 @@
+@import "../variables";
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 1;
+  transition: all .2s linear;
+
+  &:hover {
+    transform: scale(.9);
+  }
+}
+
+.counter {
+  position: absolute;
+  right: 80px;
+  top: 30px;
+  z-index: 1;
+  color: $primary-gray;
+
+  &.error {
+    color: $error-color;
+  }
+}

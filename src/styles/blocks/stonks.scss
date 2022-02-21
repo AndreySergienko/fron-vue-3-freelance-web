@@ -1,0 +1,143 @@
+@import "../variables";
+
+.stonks {
+  margin: 0 auto;
+  padding: 50px;
+  width: 830px;
+  height: 270px;
+
+  background: rgba($form-background-color, .1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__items {
+    padding: 20px;
+
+    min-width: 170px;
+    min-height: 170px;
+    width: 170px;
+    height: 170px;
+
+    border-radius: 20px;
+    background: $yellow-color;
+    border: 3px solid #ada765;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all .3s ease;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &-create {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      filter: grayscale(0) brightness(100%);
+    }
+
+    &-helper {
+      margin-right: 20px;
+      display: flex;
+    }
+
+    & svg {
+      transition: all .2s linear;
+    }
+
+    &:not(&-create) {
+
+      &::before,
+      &::after {
+        content: '';
+
+        position: absolute;
+        left: -5px;
+        bottom: 0;
+
+        width: 105%;
+        height: 100%;
+
+        transition: all .2s ease;
+      }
+
+      &::before {
+        border-radius: 20px;
+      }
+
+      &::after {
+        background: url("~@/assets/img/procent.svg") no-repeat center;
+      }
+
+      &:hover {
+        &::before {
+          background-color: rgba(15, 15, 15, .8);
+        }
+      }
+    }
+
+    &:hover {
+      & svg {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__img {
+    &-delete {
+      display: none;
+    }
+  }
+
+  &__items:hover &__img-delete {
+    display: block;
+
+    position: absolute;
+    top: 75px;
+    left: 70px;
+    z-index: 5;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 16px;
+  }
+
+  &__price {
+    font-size: 24px;
+  }
+
+  &__title,
+  &__price {
+    font-family: $montserrat;
+    font-weight: 600;
+    color: #2D2D2D;
+    text-align: center;
+  }
+}

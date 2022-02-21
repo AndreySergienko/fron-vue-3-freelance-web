@@ -1,0 +1,61 @@
+@import "../variables";
+
+.indicators {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  opacity: .3;
+  background: $primary-gray;
+  border-radius: 50%;
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.arrow-back,
+.arrow-next {
+  margin: 0 10px;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  top: 55px;
+
+  &.disabled {
+    opacity: .4;
+  }
+
+  &-stonks {
+    top: 120px;
+  }
+
+  transition: all .2s ease;
+}
+
+.arrow-back {
+  left: -5px;
+
+  transform: rotate(90deg);
+
+  &:hover {
+    transform: rotate(90deg) scale(.9);
+  }
+}
+
+.arrow-next {
+  right: -5px;
+
+  transform: rotate(-90deg);
+  &:hover {
+    transform: rotate(-90deg) scale(.9);
+  }
+}

@@ -1,0 +1,31 @@
+@import "../variables";
+
+
+.board {
+  height: 680px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+  background: url("~@/assets/img/background-container-board.svg") no-repeat center bottom;
+
+  position: relative;
+
+  &__button {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    z-index: 1;
+  }
+}
+
+.board-documents {
+  margin: 100px 0;
+  display: block;
+  height: 890px;
+  border-radius: 20px;
+  background: url("~@/assets/img/background-documents.svg") no-repeat center bottom;
+}

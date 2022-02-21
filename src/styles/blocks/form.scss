@@ -1,0 +1,284 @@
+@import "../variables";
+
+.form {
+  padding: 15px 35px;
+  max-width: 550px;
+  width: 100%;
+  height: 340px;
+
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: height .2s ease;
+
+  position: relative;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    position: relative;
+  }
+
+  &__control {
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    &-price {
+      max-width: 170px;
+    }
+
+    &-create {
+      width: 500px;
+
+      &-max {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &-category {
+      margin-bottom: 0;
+
+      width: 305px;
+    }
+
+    &-documents {
+      margin-bottom: 0;
+    }
+
+    &.invalid .input {
+      border-color: $error-color;
+    }
+
+    &-stock {
+      flex-direction: row;
+
+      &-title {
+        width: 325px;
+      }
+
+      &-price {
+        width: 135px;
+      }
+    }
+  }
+
+  &-auth {
+    background: url("~@/assets/img/test-bg-form-webp.webp") no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    //background: rgba($form-background-color, .1);
+    //backdrop-filter: blur(20px);
+    //-webkit-backdrop-filter: blur(20px);
+  }
+
+  &.invalid {
+    height: 360px;
+  }
+
+  &-letter {
+    height: 520px;
+
+    &-stonks {
+      width: 550px;
+      background: rgba($form-background-color, .1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    &.invalid {
+      height: 560px;
+    }
+  }
+
+  &-small {
+    height: 300px;
+
+    &.invalid {
+      height: 320px;
+    }
+  }
+
+  &-create-documents {
+    padding: 25px;
+    max-width: 100%;
+    height: 500px;
+  }
+
+
+  &__errors {
+    margin-top: auto;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 30px 0 45px;
+
+    font-size: 36px;
+    color: $primary-gray;
+    text-align: center;
+  }
+
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-stock-info {
+      justify-content: space-between;
+    }
+
+    &-personal-form {
+      justify-content: space-between;
+    }
+
+    &-create {
+      justify-content: space-between;
+
+      &.one-btn {
+        justify-content: end;
+      }
+    }
+
+    &-letter {
+      justify-content: space-between;
+    }
+  }
+
+  &__button {
+    margin-right: 30px;
+
+    &-create {
+      position: absolute;
+      left: 32%;
+      top: 35%;
+      z-index: 1;
+    }
+
+    &-textarea {
+      position: absolute;
+      left: 23%;
+      top: 35%;
+      z-index: 1;
+    }
+  }
+
+  &__error {
+    text-align: center;
+    font-size: 14px;
+    font-family: $montserrat;
+    color: $error-color;
+
+    &-cat {
+      margin: 10px auto 0;
+      padding: 5px 10px;
+      display: flex;
+      justify-content: center;
+
+      font-size: 18px;
+      border-radius: 20px;
+      background: #2D2D2D;
+    }
+
+    &-large {
+      font-size: 16px;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    color: rgba($primary-gray, .50);
+  }
+
+  &__click {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+
+    cursor: pointer;
+  }
+}
+
+.checkbox-container {
+  display: flex;
+
+  font-size: 14px;
+  color: $primary-gray;
+
+  & > div {
+    margin-left: 10px;
+  }
+}
+
+.checkbox-label {
+  position: relative;
+  display: block;
+  height: 20px;
+  width: 44px;
+  background: #555555;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  &:after {
+    position: absolute;
+    left: -2px;
+    top: -3px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+    background: #A5934B;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 300ms ease;
+  }
+  &:active:after {
+    transform: scale(1.15, 0.85);
+  }
+
+
+}
+
+.checkbox-input {
+  display: none;
+  &:checked ~ label {
+    background: #A5934B;
+    &:after {
+      left: 20px;
+      background: darken($yellow-color, 15%);
+    }
+  }
+  &:disabled ~ label {
+    background: lighten(#B7A147, 30%);
+    pointer-events: none;
+    &:after {
+      background: lighten(#B7A147, 20%);
+    }
+  }
+}
+
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+  opacity: 0;
+}

@@ -1,0 +1,29 @@
+@import "../variables";
+
+.documents {
+  padding: 25px;
+  height: 270px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__filter {
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    width: 24%;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__form {
+    margin-left: 25px;
+    width: 74%;
+  }
+}

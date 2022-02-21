@@ -1,0 +1,11 @@
+.icon {
+
+  &__visible {
+    position: absolute;
+    right: 15px;
+    bottom: 3px;
+    z-index: 2;
+
+    cursor: pointer;
+  }
+}
