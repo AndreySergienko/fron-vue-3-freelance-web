@@ -63,30 +63,3 @@ export default {
   }
 }
 </script>
-
-<!--  <div class="auth">-->
-<!--    <form @submit.prevent="onSubmit" class="form">-->
-<!--      <h2  class="form__title">Ваш код</h2>-->
-<!--      <div class="form__control" :class="{invalid: cError}">-->
-<!--        <input type="number" v-model="code" @blur="cBlur" class="input input-code" id="code" autocomplete="off" maxlength="6" :disabled="maxLength">-->
-<!--        <div class="code">-->
-<!--          <div class="code__items"></div>-->
-<!--          <div class="code__items"></div>-->
-<!--          <div class="code__items"></div>-->
-<!--          <div class="code__items"></div>-->
-<!--          <div class="code__items"></div>-->
-<!--          <div class="code__items"></div>-->
-<!--        </div>-->
-<!--        <small v-if="cError" class="form__error">* {{ cError }}</small>-->
-<!--      </div>-->
-
-<!--      <div class="form__buttons form__buttons-code">-->
-<!--        <button class="btn btn-usually" :disabled="isSubmitting || isTooManyAttempts" v-if="!isLoading">Войти</button>-->
-<!--        <AppLoader v-else />-->
-
-<!--        <router-link class="btn btn-link" :to="{name: 'login'}">Назад</router-link>-->
-<!--      </div>-->
-<!--      <span v-if="isTooManyAttempts">Вы слишком часто пытаетесь войти в систему. Попробуйте позже.</span>-->
-<!--      <span v-if="!isTooManyAttempts && formError"  class="form__message form__message-error">{{ formError }}</span>-->
-<!--    </form>-->
-<!--  </div>-->
