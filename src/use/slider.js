@@ -15,7 +15,7 @@ export function useSlider(max = 0, start = 0, end = 2) {
   const getItems = computed(() => {
     items.value = store.getters['sales/getSales']
     itemsSlide.value = items.value.slice(startIndexForArray.value, endIndexForArray.value)
-    let num = items.value.length / 4
+    let num = items.value.length / 3
     if (num === 0) return maxStep.value = num
     if (num % 1 === 0) {
       maxStep.value = num + 1
@@ -54,7 +54,7 @@ export function useSlider(max = 0, start = 0, end = 2) {
   }
 
   const lessThanThree = computed(() => {
-    return items.value.length < 4
+    return items.value.length < 3
   })
 
   const howManyIndicator = computed(() => {

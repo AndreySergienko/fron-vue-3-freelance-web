@@ -15,7 +15,6 @@
         <button class="btn btn-primary" :disabled="isSubmitting" v-if="!isLoading">
           Сменить пароль
         </button>
-<!--        <AppLoader v-else />-->
       </div>
 
       <div v-if="pError || formError" class="form__errors">

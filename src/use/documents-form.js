@@ -131,7 +131,7 @@ export function useDocumentsForm() {
     } else {
       isChange.value = true
       title.value = document.title
-      price.value = document.currentPrice
+      price.value = document.oldPrice
       text.value = document.description
       category.value = document.category
       id.value = document._id

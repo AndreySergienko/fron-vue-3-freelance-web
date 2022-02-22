@@ -19,16 +19,6 @@ $host.interceptors.request.use((config) => {
   return config
 })
 
-// $host.interceptors.response.use((config) => {
-//   TokenService.csrfToken = config.headers['xsrf-token']
-//   return config
-// },
-//   (config) => {
-//   console.log('test')
-//     TokenService.csrfToken = config.headers['xsrf-token']
-//     return config
-//   })
-
 $host.interceptors.response.use(
   (config) => {
     TokenService.csrfToken = config.headers['xsrf-token']

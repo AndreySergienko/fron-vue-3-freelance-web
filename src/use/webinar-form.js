@@ -109,7 +109,7 @@ export function useWebinarsForm() {
     } else {
       isChange.value = true
       title.value = webinar.title
-      price.value = webinar.currentPrice
+      price.value = webinar.oldPrice
       text.value = webinar.description
       category.value = webinar.category
       id.value = webinar._id

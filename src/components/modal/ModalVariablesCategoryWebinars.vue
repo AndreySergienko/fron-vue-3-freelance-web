@@ -54,7 +54,7 @@ export default {
     const text = ref('')
     const element = ref('')
 
-    // element для удаления
+    // element for delete
     const elementName = ref('')
 
 
