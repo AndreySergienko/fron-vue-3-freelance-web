@@ -80,7 +80,7 @@ export default {
       }, {root: true})
       return data
     },
-    async refresh({ commit, dispatch }) {
+    async refresh({ commit }) {
       try {
         const data = await refresh()
         commit('setUser', data.user)

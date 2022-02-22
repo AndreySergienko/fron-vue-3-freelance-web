@@ -114,7 +114,7 @@
                 </span>
                 </div>
               </div>
-              <div class="create__price" v-else>{{ item.currentPrice }}
+              <div class="create__price" v-else>{{ item.oldPrice }}
                 <span class="create__price-span">
                   <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_846_157)">
@@ -241,7 +241,6 @@ export default {
     })
 
     // Getters
-
     const lessThanThree = computed(() => {
       if (filter.value) {
         return currentWebinars.value = store.getters['webinar/getWebinars'].filter(web => web.category === filter.value).length < 4
@@ -305,7 +304,6 @@ export default {
     })
 
     // Methods
-
     const nextArrow = () => {
       if (maxStep.value > currentStep.value + 1) {
         currentStep.value++
